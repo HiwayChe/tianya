@@ -1,0 +1,17 @@
+{
+	"manifest_version":2,
+	"name":"tianya bbs",
+	"description":"查看页面图片，只看楼主，展开评论功能",
+	"version":"1.0",
+	
+	"browser_action":{
+		"default_icon":"tianya.gif",
+		"default_popup":"popup.html",
+		"default_title":"天涯bbs"
+	},
+	"content_scripts": [{
+    	"matches":["http://bbs.tianya.cn/*","https://bbs.tianya.cn/*"],
+    	"js": ["contentscript.js"]
+  	}],
+  	"permissions":["activeTab"]
+}
